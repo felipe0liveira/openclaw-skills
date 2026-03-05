@@ -24,6 +24,61 @@ This discover-then-execute approach ensures commands are always accurate and up-
 - **Always use `--format=json`** when you need to parse or process the output programmatically.
 - **Never hardcode command syntax from memory** — always verify with `--help` first, as commands and flags may vary across `gcloud` versions.
 
+## Few-Shot Prompting Examples
+
+### Example 1: Creating a Cloud Storage bucket
+
+**User prompt:** "Create a new storage bucket called my-app-data in us-central1"
+
+**Expected agent behavior:**
+1. Identify the relevant group: `storage`
+2. Run `gcloud storage --help` to discover subcommands
+3. Run `gcloud storage buckets --help` to find the `create` subcommand
+4. Run `gcloud storage buckets create --help` to get the exact flags and syntax
+5. Execute: `gcloud storage buckets create gs://my-app-data --location=us-central1`
+
+### Example 2: Deploying a Cloud Run service
+
+**User prompt:** "Deploy my Docker image gcr.io/my-project/api:latest to Cloud Run in us-east1"
+
+**Expected agent behavior:**
+1. Identify the relevant group: `run`
+2. Run `gcloud run --help` to discover subcommands
+3. Run `gcloud run deploy --help` to understand required flags (service name, image, region, etc.)
+4. Execute: `gcloud run deploy api --image=gcr.io/my-project/api:latest --region=us-east1 --quiet`
+
+### Example 3: Listing Kubernetes clusters
+
+**User prompt:** "Show me all GKE clusters in my project"
+
+**Expected agent behavior:**
+1. Identify the relevant group: `container`
+2. Run `gcloud container --help` to discover subcommands
+3. Run `gcloud container clusters --help` to find the `list` subcommand
+4. Run `gcloud container clusters list --help` to confirm syntax
+5. Execute: `gcloud container clusters list --format=json`
+
+### Example 4: Managing IAM permissions
+
+**User prompt:** "Grant the Storage Admin role to user alice@example.com on project my-project"
+
+**Expected agent behavior:**
+1. Identify the relevant group: `projects`
+2. Run `gcloud projects --help` to discover subcommands
+3. Run `gcloud projects add-iam-policy-binding --help` to get exact syntax and required flags
+4. Execute: `gcloud projects add-iam-policy-binding my-project --member=user:alice@example.com --role=roles/storage.admin --quiet`
+
+### Example 5: Creating a SQL database instance
+
+**User prompt:** "Create a PostgreSQL 15 instance named prod-db with 4 vCPUs and 16GB RAM"
+
+**Expected agent behavior:**
+1. Identify the relevant group: `sql`
+2. Run `gcloud sql --help` to discover subcommands
+3. Run `gcloud sql instances --help` to find the `create` subcommand
+4. Run `gcloud sql instances create --help` to understand all available flags (database version, tier, region, etc.)
+5. Execute the command using the correct flags discovered from the help output
+
 # SYNOPSIS
     gcloud GROUP | COMMAND [--account=ACCOUNT]
         [--billing-project=BILLING_PROJECT] [--configuration=CONFIGURATION]
