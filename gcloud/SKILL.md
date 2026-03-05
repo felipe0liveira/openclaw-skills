@@ -79,7 +79,9 @@ This discover-then-execute approach ensures commands are always accurate and up-
 4. Run `gcloud sql instances create --help` to understand all available flags (database version, tier, region, etc.)
 5. Execute the command using the correct flags discovered from the help output
 
-# SYNOPSIS
+## Gcloud CLI Reference (gcloud --help)
+
+SYNOPSIS
     gcloud GROUP | COMMAND [--account=ACCOUNT]
         [--billing-project=BILLING_PROJECT] [--configuration=CONFIGURATION]
         [--flags-file=YAML_FILE] [--flatten=[KEY,...]] [--format=FORMAT]
@@ -89,7 +91,7 @@ This discover-then-execute approach ensures commands are always accurate and up-
         [--impersonate-service-account=SERVICE_ACCOUNT_EMAILS] [--log-http]
         [--trace-token=TRACE_TOKEN] [--no-user-output-enabled]
 
-# DESCRIPTION
+DESCRIPTION
     The gcloud CLI manages authentication, local configuration, developer
     workflow, and interactions with the Google Cloud APIs.
 
@@ -98,7 +100,7 @@ This discover-then-execute approach ensures commands are always accurate and up-
     cheat-sheet or see the `gcloud` CLI cheat sheet
     (https://cloud.google.com/sdk/docs/cheatsheet).
 
-# GLOBAL FLAGS
+GLOBAL FLAGS
      --account=ACCOUNT
         Google Cloud user account to use for invocation. Overrides the default
         core/account property value for this command invocation.
@@ -181,7 +183,7 @@ This discover-then-execute approach ensures commands are always accurate and up-
      -h
         Print a summary help and exit.
 
-# OTHER FLAGS
+OTHER FLAGS
      --access-token-file=ACCESS_TOKEN_FILE
         A file path to read the access token. Use this flag to authenticate
         gcloud with an access token. The credentials of the active account (if
@@ -236,7 +238,7 @@ This discover-then-execute approach ensures commands are always accurate and up-
         core/user_output_enabled property value for this command invocation.
         Use --no-user-output-enabled to disable.
 
-# GROUPS
+GROUPS
     GROUP is one of the following:
 
      access-approval
