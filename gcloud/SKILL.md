@@ -1,10 +1,25 @@
 ---
 name: gcloud
-description: Manage Google Cloud Platform resources via gcloud Official CLI
+description: Built on top of the official Google Cloud SDK. Manage all Google Cloud Platform resources through the gcloud CLI by dynamically consulting `gcloud <group> --help` before executing any command, ensuring accurate and up-to-date syntax regardless of CLI version.
+homepage: https://cloud.google.com/sdk/gcloud
+metadata: {"clawdbot":{"emoji":"☁️","requires":{"bins":["gcloud"]},"install":[{"id":"gcloud-sdk","kind":"manual","url":"https://docs.cloud.google.com/sdk/docs/install-sdk","bins":["gcloud"],"label":"Install Google Cloud CLI (official)"}]}}
 ---
 
 # Google Cloud CLI
 gcloud - manage Google Cloud resources and developer workflow
+
+This skill is built on top of the [`gcloud` CLI](https://cloud.google.com/sdk/gcloud). It covers the **entire surface area** of the `gcloud` CLI — every group, subcommand, and flag — without hardcoding any specific command syntax. Instead, it dynamically discovers the correct usage by running `gcloud <GROUP> --help` at execution time, making it resilient to version changes and always in sync with the locally installed CLI.
+
+The GROUPS section below serves as a reference to map user requests to the correct `gcloud` command group. Once the group is identified, the agent must always consult the help output to understand the available subcommands and flags before executing anything.
+
+## Installation
+Follow the official Google Cloud SDK installation guide for your operating system:
+https://docs.cloud.google.com/sdk/docs/install-sdk
+
+After installation, initialize the CLI:
+```bash
+gcloud init
+```
 
 ## What You Can Do
 You can perform **any operation** available through the `gcloud` CLI by leveraging the full set of GROUPS (subcommands) listed below. This includes creating, configuring, managing, and deleting resources across all Google Cloud services.
