@@ -5,7 +5,24 @@ description: Manage Google Cloud Platform resources via gcloud Official CLI
 
 # Google Cloud CLI
 gcloud - manage Google Cloud resources and developer workflow
-{whatyoucando}
+
+## What You Can Do
+You can perform **any operation** available through the `gcloud` CLI by leveraging the full set of GROUPS (subcommands) listed below. This includes creating, configuring, managing, and deleting resources across all Google Cloud services.
+
+## Workflow
+Before executing any `gcloud` command, you **MUST** follow this workflow:
+
+1. **Identify the correct GROUP** from the GROUPS section below that matches the user's request.
+2. **Run `gcloud <GROUP> --help`** in the terminal to understand the available subcommands, flags, and usage patterns for that group. Never guess or assume command syntax — always consult the help output first.
+3. **Drill down as needed** — if the group has nested subgroups, run `gcloud <GROUP> <SUBGROUP> --help` to get the exact command syntax.
+4. **Execute the command** using the correct syntax obtained from the help output.
+
+This discover-then-execute approach ensures commands are always accurate and up-to-date with the installed `gcloud` CLI version.
+
+## Important Rules
+- **Always use `--quiet` or `-q`** when running destructive or mutating commands to avoid interactive prompts.
+- **Always use `--format=json`** when you need to parse or process the output programmatically.
+- **Never hardcode command syntax from memory** — always verify with `--help` first, as commands and flags may vary across `gcloud` versions.
 
 # SYNOPSIS
     gcloud GROUP | COMMAND [--account=ACCOUNT]
