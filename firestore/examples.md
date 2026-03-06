@@ -2,6 +2,8 @@
 
 ## Few-Shot Prompting Examples
 
+All examples below follow this policy: present the full command and wait for explicit user approval before execution, including read-only operations.
+
 ### Example 1: Creating a new document
 
 **User prompt:** "Create a user document with first_name John, last_name Doe, and is_active true in the users collection"
@@ -58,8 +60,9 @@
      }' \
      "https://firestore.googleapis.com/v1/projects/my-project/databases/(default)/documents:runQuery"
    ```
-4. Execute directly (read-only - no approval needed)
-5. Parse and present the results to the user
+4. Present the command to the user
+5. **Wait for user approval** before executing (this is a read operation)
+6. Parse and present the results to the user
 
 ### Example 3: Updating specific fields in a document
 
