@@ -9,7 +9,9 @@ metadata: {"clawdbot":{"emoji":"🔥","requires":{"bins":["curl","gcloud"]},"ins
 # Firestore
 Manage Google Cloud Firestore databases via REST API
 
-This skill enables you to interact with Google Cloud Firestore using the [Firestore REST API](https://firebase.google.com/docs/firestore/reference/rest) through `curl` commands. It uses `gcloud auth print-access-token` to obtain authentication tokens, allowing you to perform Create, Read, Update, and Delete (CRUD) operations on Firestore documents and collections.
+This skill is built on top of the official Firebase Firestore REST API reference documentation: https://firebase.google.com/docs/firestore/reference/rest
+
+It enables you to interact with Google Cloud Firestore using the [Firestore REST API](https://firebase.google.com/docs/firestore/reference/rest) through `curl` commands. It uses `gcloud auth print-access-token` to obtain authentication tokens, allowing you to perform Create, Read, Update, and Delete (CRUD) operations on Firestore documents and collections.
 
 For related documentation:
 - Installation and setup: [installation.md](installation.md)
