@@ -8,6 +8,12 @@ A collection of skills for [OpenClaw](https://openclaw.ai), available on [ClawHu
 |-------|-----------|-------------|
 | gcloud | [`gcloud/`](gcloud/) | Manage Google Cloud Platform resources via the official gcloud CLI |
 
+## How Skills Are Created
+
+Skills in this repository are specialized documentation resources designed to teach AI agents how to use specific tools and services effectively. Each skill provides clear, actionable instructions with practical examples and best practices.
+
+For detailed information on the structure and purpose of skills, see [instructions.md](instructions.md).
+
 ## Contributing
 
 Contributions are welcome! To add a new skill or improve an existing one:
