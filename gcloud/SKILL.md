@@ -1,7 +1,6 @@
 ---
 name: gcloud
 description: Built on top of the official Google Cloud SDK. Manage all Google Cloud Platform resources through the gcloud CLI by dynamically consulting `gcloud <group> --help` before executing any command, ensuring accurate and up-to-date syntax regardless of CLI version.
-homepage: https://cloud.google.com/sdk/gcloud
 metadata: {"clawdbot":{"emoji":"☁️","requires":{"bins":["gcloud"]},"install":[{"id":"gcloud-sdk","kind":"manual","url":"https://docs.cloud.google.com/sdk/docs/install-sdk","bins":["gcloud"],"label":"Install Google Cloud CLI (official)"}]}}
 ---
 

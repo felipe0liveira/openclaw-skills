@@ -7,6 +7,7 @@ A collection of skills for [OpenClaw](https://openclaw.ai), available on [ClawHu
 | Skill | Directory | Description |
 |-------|-----------|-------------|
 | gcloud | [`gcloud/`](gcloud/) | Manage Google Cloud Platform resources via the official gcloud CLI |
+| firestore | [`firestore/`](firestore/) | Manage Google Cloud Firestore databases using REST API via curl commands |
 
 ## How Skills Are Created
 
